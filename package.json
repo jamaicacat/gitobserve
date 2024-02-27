@@ -1,0 +1,11 @@
+{
+  "name": "gitobserve",
+  "version": "1.0.0",
+  "description": "tiny project with functionality to see 5 projects with most number of common contributors for repo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

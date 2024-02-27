@@ -1,0 +1,11 @@
+# syntax=docker/dockerfile:1
+FROM node:20-alpine as angular
+WORKDIR gitobserve/frontend
+COPY package.json package-lock.json ./
+RUN npm ci
+COPY . .
+RUN npm run build
+
+FROM nginx:alpine
+COPY --from=angular gitobserve/frontend/dist/frontend/browser /usr/share/nginx/html
+EXPOSE 80
