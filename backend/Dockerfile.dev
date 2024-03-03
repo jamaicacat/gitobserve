@@ -1,7 +1,7 @@
 FROM node:20-alpine as server
 WORKDIR gitobserve/backend
 COPY package.json package-lock.json ./
-RUN npm install
+RUN npm i
 COPY . .
 RUN npm run build
 EXPOSE 3000
